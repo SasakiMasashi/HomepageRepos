@@ -5,4 +5,4 @@ org.eclipse.debug.ui.consoleBackground=39,40,34
 org.eclipse.debug.ui.errorColor=202,0,0
 org.eclipse.debug.ui.inColor=213,204,109
 org.eclipse.debug.ui.outColor=248,248,242
-preferredTargets=default\:default|
+preferredTargets=default,org.chromium.debug.ui.toggleTargetId\:default|

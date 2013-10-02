@@ -1,8 +1,8 @@
 (function(){
 
 Ext.Loader.setPath({
-    'Ext.ux': 'ux/',
-    'Ext.app': 'portal/classes/'
+    'Ext.ux': 'ux',
+    'Ext.app': 'portal/classes'
 });
 
 Ext.require([
@@ -65,7 +65,7 @@ var contentBoxCreator = function(title, id){
 };
 
 
-var createItemList = function(){
+var createDevelopItemList = function(){
 	
 	var javascriptItem = createItem("Javascript", "JavascriptItemID");
 	
@@ -209,6 +209,27 @@ var createItemList = function(){
 	return itemlist;
 };
 
+var createDialyItemList = function(){
+	
+	var _201310Item = createItem("2013年10月", "201310ID");
+	
+	// _201310Item
+	{
+		{
+			var boxCreator = new contentBoxCreator("2日(水)", "BookMarkBoxID");
+			boxCreator.addLine("日曜の夜からHomepage作成を始めたものの、勝手が良く分からず。ホームページビルダーのような作成支援ツールを使う気にもなれず、取り敢えず夜に少しずつjavascriptをゴリゴリ書き続ける。");
+			boxCreator.addLine("レイアウトが固まってきたらデータベース化も考えた方が良いのか？見た目が単調すぎるので、まずそちらを何とかした方がよさそう。");
+			var box = boxCreator.getBox();
+			box.find("#BookMarkBoxID").css("background-color", "#F1F6C3");
+			_201310Item.html += box.html();
+		}
+	}
+	
+	var itemlist = [];
+	itemlist[0] = _201310Item;
+	return itemlist;
+};
+
 Ext.onReady(function () {
     Ext.tip.QuickTipManager.init();
 
@@ -221,12 +242,12 @@ Ext.onReady(function () {
                 expanded: false,
                 items: [{
                     xtype: 'portalpanel',
-                    title: '開発',
-                    tabTip: 'Dashboard tabtip',
+                    title: '開発(趣味ﾌﾟﾛｸﾞﾗﾐﾝｸﾞ)',
+                    tabTip: 'Develop tabtip',
                     border: false,
                     items: [{
                         flex: 1,
-                        items: createItemList()
+                        items: createDevelopItemList()
                     }]
                 }]
             }, {
@@ -234,7 +255,7 @@ Ext.onReady(function () {
                 items: [{
                     title: 'プロフィール',
                     iconCls: 'x-icon-configuration',
-                    tabTip: 'Configuration tabtip',
+                    tabTip: 'Profile tabtip',
                     style: 'padding: 10px;',
                     html: 'Under Construction',
 					border: false
@@ -242,12 +263,14 @@ Ext.onReady(function () {
             }, {
                 expanded: false,
                 items: [{
-                    title: '更新履歴',
-                    iconCls: 'x-icon-configuration',
-                    tabTip: 'Configuration tabtip',
-                    style: 'padding: 10px;',
-                    html: '初版作成',
-					border: false
+                	xtype: 'portalpanel',
+                    title: 'ブログ',
+                    tabTip: 'Dialy tabtip',
+                    border: false,             
+                    items: [{
+                        flex: 1,
+                        items: createDialyItemList()
+                    }]
                 }]
             }, {
                 expanded: false,
