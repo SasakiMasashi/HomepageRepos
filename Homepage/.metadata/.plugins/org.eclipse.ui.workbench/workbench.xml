@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="40" version="2.0">
+<workbench progressCount="38" version="2.0">
 <workbenchAdvisor/>
-<window height="940" width="1200" x="56" y="45">
+<window height="940" maximized="true" width="1200" x="45" y="61">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -35,13 +35,13 @@
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="com.aptana.editor.js" name="main.js" partName="main.js" path="C:/develop/WorkSpace/Aptana/Homepage2/Homepage/implement1/main.js" title="main.js" tooltip="Homepage/implement1/main.js" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="com.aptana.editor.js" name="main.js" partName="main.js" path="C:/develop/gitHub/HomepageRepos/Homepage/Homepage/implement1/main.js" title="main.js" tooltip="Homepage/implement1/main.js" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Homepage/implement1/main.js"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3536" selectionTopPixel="1640"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4587" selectionTopPixel="2064"/>
 </editor>
-<editor id="com.aptana.editor.html" name="index.html" partName="index.html" path="C:/develop/WorkSpace/Aptana/Homepage2/Homepage/implement1/index.html" title="index.html" tooltip="Homepage/implement1/index.html" workbook="DefaultEditorWorkbook">
+<editor id="com.aptana.editor.html" name="index.html" partName="index.html" path="C:/develop/gitHub/HomepageRepos/Homepage/Homepage/implement1/index.html" title="index.html" tooltip="Homepage/implement1/index.html" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Homepage/implement1/index.html"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="402" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="493" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -53,6 +53,9 @@
 <view id="com.aptana.samples.ui.SamplesView" partName="サンプル"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="問題">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="問題">
+<expanded>
+<category IMemento.internal.id="警告 (6 項目)"/>
+</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="165" org.eclipse.ui.ide.markerType="165" org.eclipse.ui.ide.pathField="220" org.eclipse.ui.ide.resourceField="165" org.eclipse.ui.ide.severityAndDescriptionField="550"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -156,7 +159,7 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.08353034" ratioLeft="106" ratioRight="1163" relationship="2" relative="left"/>
 <info folder="true" part="terminalArea" ratio="0.74970484" ratioLeft="635" ratioRight="212" relationship="4" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="0">
+<folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
 <page content="com.aptana.terminal.views.terminal" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
@@ -187,6 +190,7 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/Homepage/implement1/main.js"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" path="/Homepage/implement1/index.html"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" path="/Homepage/implement1/index.html"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.html" path="/Homepage/implement1/index.html"/>
 </editors>
 <item historyLabel="main.js" index="0">
 <position info="not_deleted" x="2749" y="0"/>
@@ -203,8 +207,14 @@
 <item historyLabel="main.js" index="0">
 <position info="not_deleted" x="6376" y="0"/>
 </item>
-<item active="true" historyLabel="main.js" index="0">
+<item historyLabel="main.js" index="0">
 <position info="not_deleted" x="4855" y="0"/>
+</item>
+<item historyLabel="index.html" index="3">
+<position info="not_deleted" x="493" y="0"/>
+</item>
+<item active="true" historyLabel="main.js" index="0">
+<position info="not_deleted" x="386" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>

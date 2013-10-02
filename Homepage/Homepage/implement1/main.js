@@ -25,7 +25,7 @@ var createLink = function(message, url){
 					.attr("target", "_blank")
 	                .text(message);
 	return a;
-}
+};
 
 var createItem = function(message, id){
 	return {
@@ -33,7 +33,7 @@ var createItem = function(message, id){
   		closable: false,
   		html: ''
 	};
-}
+};
 
 var contentBoxCreator = function(title, id){
 	this.id = id;
@@ -50,7 +50,7 @@ var contentBoxCreator = function(title, id){
 	this.addLine = function(line){
 		//this.content.append($("<p>").text(line));
 		this.content.append(line).append("<br>");
-	}
+	};
 	
 	this.getBox = function(){
 		var div = $("<div>", {"id": this.id}).append(this.header)
@@ -61,8 +61,8 @@ var contentBoxCreator = function(title, id){
 											 .css("border", "dashed thin #808080")
 											 .css("background-color", "#DEF7F1");
 		return $("<div>").append(div);
-	}
-}
+	};
+};
 
 
 var createItemList = function(){
@@ -140,6 +140,34 @@ var createItemList = function(){
 			boxCreator.addLine("ランダムに選択した回答用文面にキーワードを埋め込んで返す。");
 			cppItem.html += boxCreator.getBox().html();
 		}
+		
+		// WebCrawler
+		{
+			var boxLink = createLink("WebCrawler [github]", "https://github.com/SasakiMasashi/repos/tree/master/WebCrawler");
+			var boxCreator = new contentBoxCreator(boxLink, "CppWebCrawlerID");
+			boxCreator.addLine("seed.txtファイルに開始URLを探索開始ノードを登録しておくと、そこを開始点としてWebページをロードしてリンクを抽出し探索を続ける");
+			boxCreator.addLine("htmlをパースする処理が単純なテキスト解析ベースでしかないため、javascriptで動的に追加されたリンクを探れないなど、欠点が多い。");
+			boxCreator.addLine("各Webノード毎にテキストとリンクを抽出して出力用フォルダに結果を出力する。");
+			cppItem.html += boxCreator.getBox().html();
+		}
+		
+		// PageRank
+		{
+			var boxLink = createLink("PageRank [github]", "https://github.com/SasakiMasashi/repos/tree/master/PageRank");
+			var boxCreator = new contentBoxCreator(boxLink, "CppPageRankID");
+			boxCreator.addLine("上記WebCrawlerで集めたリンク情報からWebグラフを構築して、それをもとに各ノードのPageRankを計算した。");
+			boxCreator.addLine("CrawlerのParserの信頼度が低いものの、Webグラフを構築できればPageRankを計算可能");
+			cppItem.html += boxCreator.getBox().html();
+		}
+		
+		// MPI
+		{
+			var boxLink = createLink("MPI [github]", "https://github.com/SasakiMasashi/repos/tree/master/MPI");
+			var boxCreator = new contentBoxCreator(boxLink, "CppMPIID");
+			boxCreator.addLine("MPICH2を用いたテスト実装。");
+			boxCreator.addLine("MPICH2Test3はトークンリングを用いて最大値を計算している。複数PC上の複数ノード上で各ノードにランダムに値を割り当てた場合の最大値を算出");
+			cppItem.html += boxCreator.getBox().html();
+		}
 	}
 	
 	var javaItem = createItem("Java", "JavaItemID");
@@ -170,7 +198,7 @@ var createItemList = function(){
 	itemlist[6] = lispItem;
 	itemlist[7] = perlItem;
 	return itemlist;
-}
+};
 
 Ext.onReady(function () {
     Ext.tip.QuickTipManager.init();
@@ -226,4 +254,4 @@ Ext.onReady(function () {
 });
 
 
-})()
+})();
