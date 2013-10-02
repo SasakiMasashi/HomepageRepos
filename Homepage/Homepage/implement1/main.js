@@ -115,8 +115,8 @@ var createItemList = function(){
 		{
 			var boxLink = createLink("CaptureDesktop [github]", "https://github.com/SasakiMasashi/repos/tree/master/CaptureDesktop");
 			var boxCreator = new contentBoxCreator(boxLink, "CppCaptureDesktopID");
-			boxCreator.addLine("画面をキャプチャーするツール。拡張子はgif, bmp, jpg, pngに対応、");
-			boxCreator.addLine("キャプチャーする範囲を変更することが可能、デュアルモニターにも対応しています。作成環境 Visual Studio 2005");
+			boxCreator.addLine("画面をキャプチャーするツール。出力するファイルの拡張子はgif, bmp, jpg, pngに対応、");
+			boxCreator.addLine("キャプチャーする範囲を変更することが可能、デュアルモニターにも対応。作成環境 Visual Studio 2005");
 			cppItem.html += boxCreator.getBox().html();
 		}
 		
@@ -156,7 +156,7 @@ var createItemList = function(){
 			var boxLink = createLink("PageRank [github]", "https://github.com/SasakiMasashi/repos/tree/master/PageRank");
 			var boxCreator = new contentBoxCreator(boxLink, "CppPageRankID");
 			boxCreator.addLine("上記WebCrawlerで集めたリンク情報からWebグラフを構築して、それをもとに各ノードのPageRankを計算した。");
-			boxCreator.addLine("CrawlerのParserの信頼度が低いものの、Webグラフを構築できればPageRankを計算可能");
+			boxCreator.addLine("CrawlerのParserの信頼度が低いものの、Webグラフを構築できれば、そのPageRankを計算");
 			cppItem.html += boxCreator.getBox().html();
 		}
 		
@@ -166,6 +166,15 @@ var createItemList = function(){
 			var boxCreator = new contentBoxCreator(boxLink, "CppMPIID");
 			boxCreator.addLine("MPICH2を用いたテスト実装。");
 			boxCreator.addLine("MPICH2Test3はトークンリングを用いて最大値を計算している。複数PC上の複数ノード上で各ノードにランダムに値を割り当てた場合の最大値を算出");
+			cppItem.html += boxCreator.getBox().html();
+		}
+		
+		// MillingTimeCalculator
+		{
+			var boxLink = createLink("MillingTimeCalculator [github]", "https://github.com/SasakiMasashi/repos/tree/master/MillingTimeCalculator");
+			var boxCreator = new contentBoxCreator(boxLink, "CppMillingTimeCalculatorID");
+			boxCreator.addLine("加工機を制御するNCファイルの切削経路長と加工時間を計算するツール");
+			boxCreator.addLine("exeの引数にフォルダを与えると、そのフォルダに含まれる全てのncファイルの加工時間を計算して、htmlの表にして結果を表示する");
 			cppItem.html += boxCreator.getBox().html();
 		}
 	}
@@ -227,7 +236,7 @@ Ext.onReady(function () {
                     iconCls: 'x-icon-configuration',
                     tabTip: 'Configuration tabtip',
                     style: 'padding: 10px;',
-                    html: '',
+                    html: 'Under Construction',
 					border: false
                 }]
             }, {
